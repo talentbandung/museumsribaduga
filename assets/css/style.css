@@ -1,0 +1,153 @@
+.image-logo	{
+	width: 50px;
+	height: 50px;
+	margin-top: -15px;
+}
+
+.gambar {
+    background-image: url(assets/img/cover-museum-pos-1280x855.jpg);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    margin-bottom:0px;
+    min-height: 670px;
+    margin-top: -60px;
+    padding-top: 160px;
+    text-align: center;
+}
+
+.overlay{
+  background: rgba(63, 29, 94, 0.5);
+  color: #fff;
+  overflow: hidden;
+}
+
+.overlaynav{
+  background: rgb(63, 29, 94);
+  color: #fff;
+  overflow: hidden;
+}
+
+.w-100 {
+    width: 100%!important;
+    height: 600px;
+}
+
+.d-block {
+    display: block!important;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+nav {
+  background-color: maroon;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;color: #fff !important;float: left;padding: 15px 15px;line-height: 20px;height: 50px;
+}
+
+.nav-link {
+  font-family: 'Pacifico', cursive;color: #fff !important; 
+}
+
+nav.shrink  {
+  background-color: rgba(255, 193, 7, 0.35);
+  color: white;
+  /*height: 60px;*/
+  padding-top: 0px;
+}
+
+
+nav.shrink.navbar-logo  {
+  font-size: 20px;
+  padding: 30px 0px 0px 80px;
+  color: white;
+}
+
+nav.shrink>li>a {
+  color: white;
+  font-size: 16px;
+  font-family: heading-text;
+  padding-top: 30px;
+}
+
+.img-logo2  {
+  width: 150px;
+  height: 150px;
+  vertical-align: middle;
+  border-style: none;
+}
+
+#slider-home .carousel-indicators {
+  position: relative;
+  top: 3rem;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 10%;
+}
+
+.carousel-item {
+  color: orange;
+  text-shadow: #666 !important;
+  
+}
+
+.alamat {
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 0px;
+}
+
+.kontak {
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 0px;
+}
+
+.ukuran{
+  width:450px;
+}
+
+@media screen and (max-width: 500px) {
+  .map{
+      width:100% !important;
+  }
+  .ukuran{
+      width:100%;
+  }
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.navbar-toggler .navbar-toggler-right .collapsed {
+  font-size: 12px; background-color: black; text-transform: uppercase; color: #fed136; right: 0; border: 0; margin: 0;
+}
+
+#up {
+  position: fixed;bottom: 20px;right: 30px; z-index: 99;border: none;outline: none;cursor: pointer;padding: 15px;border-radius: 10px;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: rgba(0,0,0,.1);
+}
