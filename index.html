@@ -10,26 +10,30 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/css/scrolling-nav.css">
     <!-- nivo slider stylesheet -->
     <link href="assets/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="assets/css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/lightbox.css">
 </head>
 <style type="text/css">
   body {
-    background: url('assets/img/efek.png');
+      /*background: url('assets/img/efek.png');*/
   }
-  .brand {
+  .navbar-brand {
     font-family: 'Pacifico', cursive;color: #fff !important;float: left;padding: 15px 15px;line-height: 20px;height: 50px;
   }
+
   .theme-default .nivo-controlNav {
-      text-align: center;
-      padding: 20px 0;
-      background: url('assets/img/back-content/flower2.png')black no-repeat;
-      background-position : -10% 50%; color: #fff;     
-      border-color: #170702;
-      border-width : 0px;
-      border-radius : 2px 2px 2px 2px;background-size: 60%; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: -10px;
+    background: url('assets/img/back-content/flower2.png')black no-repeat;
+    background-position : -10% 50%; color: #fff;     
+    border-color: #170702;
+    border-width : 0px;
+    border-radius : 2px 2px 2px 2px;background-size: 60%; 
   }
   blockquote:before, blockquote:after,
     q:before, q:after {
@@ -47,8 +51,8 @@
     background-position : -10% 50%; color: #fff;
   }
 
-  .py-5.bg-default {
-    background: url('assets/img/back-content/flower2.png')#7B1113 no-repeat;background-color: black;
+  .py-5.bg-dark {
+    /*background: url('assets/img/back-content/flower2.png')#7B1113 no-repeat;background-color: black;*/
     border-color: navy;
     border-width : 0px;
     border-radius : 2px 2px 2px 2px;background-size: 100%;
@@ -63,244 +67,457 @@
     border-radius : 2px 2px 2px 2px;background-size: 60%;
     background-position : -10% 50%; color: #fff;  
   }
+
+  #jadwal {
+    color: gray;
+    background-color: gray;
+    padding: 100px;
+  }
+
+  .title-jadwal {
+    text-align: center;
+    color: white;
+  }
+  p {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+  }
+  table, table .main {
+      width: 100%;
+      border: 1 solid #666;
+      border-collapse: collapse;
+      color: black;
+      background-color: white;
+      font-size: 16pt;
+  }
+  #head {
+    background-color: maroon;
+    color: white;
+    font-size: 16pt;
+
+  }  
+  
+  #contact  {
+    background:#8e2325;
+
+  }
+  .lead {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: bold;
+    text-align: justify;
+  }
+
+  .title-head {
+    padding-bottom: 40px;
+    color: black;
+  }
+  #about {
+    background-color: #958f92;
+    color: #000;
+    padding-bottom: 20px;
+  }
+  #saran {
+    background-color: #958f92;
+    color: #000;
+    padding-bottom: 20px;
+  }
+  #galeri {
+    background-color: #958f92;
+    color: #000;
+    padding-bottom: 20px;
+  }
 </style>
-<body>
-    <div class="container" style="margin-top: 90px;">
-        <div class="card">
-          <div class="card-header text-muted">
-            <marquee><p style="color: #fff;">- MUSEUM MILIK PEMERINTAH DAERAH TERBAIK TAHUN 2017 -</p></marquee>
+<body id="top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img src="assets/img/logo.png" class="img-responsive image-logo" alt="" style="width:auto; height: 30px;">          
+        Museum Sri Baduga</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-right">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html"><i class="fa fa-home"></i> Home </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Tentang Museum
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item js-scroll-trigger" href="#about">Sejarah</a>
+              <a class="dropdown-item js-scroll-trigger" href="#struktur">Struktur Organisasi</a>
+              <a class="dropdown-item js-scroll-trigger" href="#visimisi">Visi, Misi, Tugas dan Fungsi</a>
+              <a class="dropdown-item" href="#saran">Saran & Komentar</a>                            
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#galeri"><i class="fa fa-image"></i> Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#koleksi"> Koleksi Museum</a>
+          </li>                    
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact"><i class="fa fa-phone"></i> Contact</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- nivo slider -->
+    <div class="slider-wrapper theme-default" style="margin-top: 65px;">
+      <div id="slider" class="nivoSlider"> 
+        <img src="assets/img/header/6.jpg" data-thumb="assets/img/header/6.jpg" alt="" title="Museum Milik Pemerintah Daerah Terbaik Tahun 2017" />
+        <img src="assets/img/header/1.jpg" data-thumb="assets/img/header/1.jpg" alt="" title="Museum Negeri Sri Baduga" />
+        <a href="https://dev7studios.com">
+          <img src="assets/img/header/2.jpg" data-thumb="assets/img/header/2.jpg" alt="" title="Museum Negeri Sri Baduga" />
+        </a> 
+        <img src="assets/img/header/3.jpg" data-thumb="assets/img/header/3.jpg" alt="" title="Milangka Inggit Garnasih ka 129" data-transition="slideInLeft" /> 
+        <img src="assets/img/header/4.jpg" data-thumb="assets/img/header/4.jpg" alt="" title="Dirgahayu indonesia ke - 72" title="#htmlcaption" /> 
+      </div>
+    </div>          
+
+    <!-- about page -->
+    <div id="about" class="about ">
+        <br>
+        <div class="container">
+          <br>
+          <h2 class="section-heading text-center">Tentang Museum Sri Baduga!</h2>
+          <br>
+          <div class="row text-justify">
+            <div class="col"><p>Museum Negeri Sri Baduga yang terletak di ruas Jalan B.K.R. 185 Tegallega dan berhadapan dengan Monumen Bandung Lautan Api, dirintis sejak tahun 1974 dengan memanfaatkan lahan dan bangunan bekas kewedanaan Tegallega. Bangunan Museum berbentuk bangunan suhunan panjang dan rumah panggung khas Jawa Barat yang dipadukan dengan gaya arsitektur modern....</p></div>
+            <div class="col"><p>Untuk lebih meningkatkan daya apresiasi masyarakat terhadap museum, berbagai kegiatan telah dijalankan, baik yang bersifat kegiatan mandiri ataupun kerjasama kegiatan yang bersifat lintas sektoral dengan berbagai instansi pemerintah, swasta, maupun lembaga asing diantaranya berupa penyelenggaraan pameran temporer, pameran keliling, pameran bersama dengan museum dari berbagai propinsi.....</p></div>
           </div>
-          <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider"> 
-              <img src="assets/img/header/6.jpg" data-thumb="assets/img/header/6.jpg" alt="" title="Museum Milik Pemerintah Daerah Terbaik Tahun 2017" />
-              <img src="assets/img/header/1.jpg" data-thumb="assets/img/header/1.jpg" alt="" title="Museum Negeri Sri Baduga" />
-              <a href="http://dev7studios.com">
-                <img src="assets/img/header/2.jpg" data-thumb="assets/img/header/2.jpg" alt="" title="Museum Negeri Sri Baduga" />
-              </a> 
-              <img src="assets/img/header/3.jpg" data-thumb="assets/img/header/3.jpg" alt="" title="Milangka Inggit Garnasih ka 129" data-transition="slideInLeft" /> 
-              <img src="assets/img/header/4.jpg" data-thumb="assets/img/header/4.jpg" alt="" title="Dirgahayu indonesia ke - 72" title="#htmlcaption" /> 
+          <div class="row text-justify">
+            <div class="col"><p>Selanjutnya penyajian koleksi ditata sedemikian rupa dan diupayakan agar pengunjung dapat memperoleh gambaran tentang perjalanan sejarah alam dan budaya Jawa barat, corak dan ragamnya, serta fase-fase perkembangan serta perubahannya. Pengelompokannya dibagi menjadi; lantai satu merupakan tampilan perkembangan awal dari sejarah alam dan budaya Jawa Barat.....</p></div>
+            <div class="col"><p>Selanjutnya di lantai kedua meliputi materi pameran budaya tradisional berupa pola kehidupan masyarakat, mata pencaharian hidup, perdagangan, dan transportasi; pengaruh budaya Islam dan Eropa, sejarah perjuangan bangsa,dan lambang-lambang daerah kabupaten dan kota se-Jawa Barat. Adapun lantai tiga, memamerkan koleksi etnografi berupa ragam bentuk dan fungsi wadah, kesenian, dan keramik asing</p></div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <!-- structure & vision mision -->
+    <section id="struktur" style="background-color: white;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h4 class="title-head"><strong>Visi</strong></h4>
+            <p>"MUSEUM NEGERI SRI BADUGA MENJADI DESTINASI INSPIRATIF BUDAYA TERMAJU DI INDONESIA TAHUN 2018"</p>
+            <h4><strong>Misi</strong></h4>
+            <p>
+              <ul class="list-group">
+                <li class="list-group-item">Menggali adiluhung budaya Jawa Barat untuk membentuk karakter bangsa</li>
+                <li class="list-group-item">Melestarikan Cagar Budaya secara berkelanjutan</li>
+                <li class="list-group-item">Meningkatkan program Inspiratif dan Apresiasi Masyarakat terhadap Adiluhung Budaya Bangsa</li>
+                <li class="list-group-item">Meningkatkan Pelayanan Informasi Dan Promosi Museum Berkesinambungan</li>
+              </ul>
+            </p>
+            <p style="text-align: justify;">
+              Untuk mencapai visi misi dan menjalankan tugas dan fungsinya sebagai lembaga pelestarian, Balai Pengelolaan Museum Negeri Sri Baduga salah satunya melakukan pelestarian benda warisan tinggalan budaya melalui kegiatan Konservasi dan Restorasi Koleksi Museum dari kerusakan dan pelapukan. Dalam melakukan konservasi dan restorasi tersebut, diperlukan juga bahan berupa obat, bahan lain dan material bangunan. Selain itu dibutuhkan tenaga konservator yang handal dan terampil untuk meningkatkan wawasan dan kemampuan dengan cara mengikuti pelatihan-pelatihan atau mendatangkan tenaga ahli di bidang konservasi.
+            </p>
+          </div>
+          <div class="col-lg-6 mx-auto">
+            <div class="container">
+              <div class="row">
+                <h4 class="title-head">Struktur Organisasi</h4>
+                <br>
+                  <img src="http://museumsribaduga.jabarprov.go.id/themes/lumen/assets/img/STO.jpg" class="img-responsive image-circle" alt="" style="margin-bottom: 20px; width: 600px; height: auto; border-radius: 10px;">
+                  <p>
+                    <ul class="list-group">
+                      <li class="list-group-item">Kepala Museum : Memimpin mengkoodinasikan dan mengendalikan pelaksanaan kegiatan pengetahuan museum</li>
+                      <li class="list-group-item">Sub Bagian Tata Usaha : Melaksanakan penyusunan rencana kerja pengelolaan administrasi kepegawaian, keuangan, perlengkapan, umum dan pelaporan</li>
+                      <li class="list-group-item">Rumpun Jabatan Fungsional : Adalah pegawai museum yang diberi tanggung jawab, wewenang dan hak secara penuh oleh pejabat yang berwenang untuk melaksanakan kegiatan pembinaan kebudayaan</li>
+                      <li class="list-group-item">Seksi Perlindungan : Menyusun rencana pelaksanaan kegiatan pemeliharaan, penyimpanan dan pengamanan koleksi</li>
+                      <li class="list-group-item">Seksi Pemanfaatan : Melaksanakan penyusunan rencana peningkatan promosi museum</li>
+                    </ul>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <!-- Page Content -->
+    <section id="galeri">
+    <div class="container">
+
+      <h1 class="my-4 text-center text-lg-center">Gallery Balad Museum</h1><br><br><br>
+
+      <div class="row text-center text-lg-left">
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_443_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_443_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_454_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_454_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_464_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_464_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_472_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_472_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_505_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_505_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_518_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_518_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_528_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_528_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_618_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_618_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_638_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_638_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_399_400x300_0_0_crop.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_399_400x300_0_0_crop.jpg"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_317_400x300_0_0_crop.png" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_317_400x300_0_0_crop.png"> </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="example-image-link d-block mb-4 h-100" href="assets/img/balad-museum/bahan/thumb_359_400x300_0_0_crop.png" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z img-fluid img-thumbnail" alt="Bootstrap template" src="assets/img/balad-museum/bahan/thumb_359_400x300_0_0_crop.png"> </a>
+        </div>
+      </div>
+
+    </div>      
+    </section>
+    <!-- /.container -->
+
+    <div id="jadwal" class="jadwal">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="title-jadwal">Jadwal Buka</h2>
+            <br>
+            <table border="1" align="center">
+              <thead id="head">
+                <tr>
+                    <td rowspan="2" align="center"> Hari</td>
+                    <td colspan="3" align="center"> Harga Tiket</td>
+                </tr>
+                
+                <tr>
+                    <td align="center">Jam Buka</td>
+                    <td align="center">Jam Tutup</td>
+                    <td align="center">Tarif</td>
+                </tr>
+                
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Minggu </td>
+                  <td> 08:00 AM </td>
+                  <td> 12:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>
+                <tr>
+                  <td> Senin </td>                   
+                  <td colspan="3" rowspan="" headers=""><center>Closed</center></td>
+                </tr>
+                <tr>
+                  <td> Selasa </td>
+                  <td> 08:00 AM </td>
+                  <td> 04:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>
+                <tr>
+                  <td> Rabu </td>
+                  <td> 08:00 AM </td>
+                  <td> 04:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>
+                <tr>
+                  <td> Kamis </td>
+                  <td> 08:00 AM </td>
+                  <td> 04:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>
+                <tr>
+                  <td> Jumat </td>
+                  <td> 08:00 AM </td>
+                  <td> 04:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>
+                <tr>
+                  <td> Sabtu </td>
+                  <td> 08:00 AM </td>
+                  <td> 04:00 PM </td>
+                  <td align="center">Gratis</td>
+                </tr>                                
+              </tbody>
+            </table>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="koleksi">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Koleksi Museum</h2>
+            <br><br>
+            <div class="jumbotron alamat">
+              <div class="container">
+                <div class="card-group">
+                  <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/1.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/1.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Geologika</h4>
+                      <p class="card-text">Benda koleksi yang menjadi kajian disiplin ilmu, antara lain: batuan, mineral, fosil, dan benda-benda bentukan alam lainnya (granit, andesit).</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>
+                  </div> 
+                  <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/2.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/2.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Numisamatika / Heraldika</h4>
+                      <p class="card-text">Numismatika adalah setiap mata uang atau alat tukar (token) yang sah. Heraldika adalah setiap tanda jasa, lambang, dan tanda pangkat resmi (termasuk cap/stempel).</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>
+                  </div> 
+                  <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/3.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/3.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Biologika</h4>
+                      <p class="card-text">Benda koleksi yang masuk kategori benda objek penelitian/dipelajari oleh disiplin ilmu biologi, antara lain berupa tengkorak atau rangka manusia, tumbuh-tumbuhan dan hewan baik fosil maupun bukan.</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>
+                  </div> 
+                  </div> 
+                  <div class="card-group">
+                    <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/4.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/4.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Filologika</h4>
+                      <p class="card-text">Benda koleksi yang menjadi objek penelitian Antropologi. Benda-benda tersebut merupakan hasil budaya atau menggambarkan identitas suatu etnis.</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>
+                  </div> 
+                  <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/5.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/5.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Etnografika</h4>
+                      <p class="card-text">Benda koleksi yang menjadi objek penelitian filologika, berupa naskah kuno yang ditulis tangan menguraikan sesuatu hal atau peristiwa.</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>
+                  </div> 
+                  <div class="card" style="width: 20rem;">
+                    <a class="example-image-link" href="assets/img/koleksi/6.jpg" data-lightbox="example-set" data-title="Food court in door"><img class="img-responsive z card-img-top" alt="Bootstrap template" src="assets/img/koleksi/6.jpg"> </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Keramologika</h4>
+                      <p class="card-text">Benda koleksi yang dibuat dari bahan tanah liat yang dibakar (baked clay) berupa barang pecah belah.</p>
+                      <a href="#" class="btn btn-primary">Lihat</a>
+                    </div>                    
+                  </div>                 
+                </div>
+              </div>
             </div>
           </div>          
         </div>
       </div>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top page-scroll" href="#page-top">
+    </section>
+    <!-- about page -->
+    <div id="saran" class="saran">
+        <br><br><br>
+        <div class="container">
+          <div class="row">
+          <div class="col-md-6">
+            <h2><i class="fa fa-lg fa-lightbulb-o"></i> Saran</h2>
+            <br>
+            <div class="container">
+              <div class="row">
+                <!-- null -->
+              </div> 
+            </div>
+          </div>
+          <br><br>
+          <div class="col-md-6">
+            <div class="wrapper">
+                <h2><i class="fa fa-lg fa-comments-o"></i> Komentar</h2>
+                <div class="row">
+                  <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                      <label for="Name">Name</label>
+                      <input type="email" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="Email">Email</label>
+                      <input type="text" class="form-control" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="Phone">Phone</label>
+                      <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="Message">Message</label>
+                      <textarea type="text" class="form-control" name="message" placeholder="Message" rows="8" style="width: 600px;"></textarea>
+
+                    </div>
+                    <div class="form-group pull-right">
+                      <button type="button" class="btn btn-primary"><i class="fa fa-lg fa-paper-plane"></i> Send</button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-lg fa-chevron-left"></i> Back</button>
+                    </div>
+                  </form>
+                </div>
+              </div>              
+              </div>              
+            </div>  
+        </div>
+        <br><br>
+    </div>
+    <section id="contact">
       <div class="container">
-        <a class="brand">
-          Museum Sri Baduga</a>
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-right">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-info"></i> Tentang Museum
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Sejarah</a>
-                <a class="dropdown-item" href="#">Struktur Organisasi</a>
-                <a class="dropdown-item" href="#">Visi, Misi, Tugas dan Fungsi</a>
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h2>Alamat Museum Sri Baduga</h2>
+            <br><br>
+            <div class="jumbotron  alamat">
+              <div class="container">
+                <p class="lead"><i class="fa fa-lg fa-map-marker"></i> Jalan BKR No.185, Pelindung Hewan, Astanaanyar, Kota Bandung, Jawa Barat 40243</p>
+                <p class="lead"><i class="fa fa-lg fa-phone"></i> (022) 5210976</p>
               </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-sign-in"></i> Kunjungan
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Informasi Kunjungan</a>
-                <a class="dropdown-item" href="#">Booking Online</a>
-                <a class="dropdown-item" href="#">Saran & Komentar</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-image"></i> Galeri
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="balad-museum.html">Balad Museum</a>
-                <a class="dropdown-item" href="#">Kegiatan Museum</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-archive"></i> Koleksi
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Daftar Koleksi</a>
-                <a class="dropdown-item" href="#">Perpustakaan</a>
-              </div>
-            </li>   
-            <li class="nav-item">
-              <a class="nav-link" href="agenda.html"><i class="fa fa-calendar"></i> Agenda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="akun-balad-museum.html"><i class="fa fa-user"></i> Akun Balad Museum</a>
-            </li>                     
-          </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mx-auto">
+            <h2>Lokasi Museum</h2>
+            <br><br>
+              <div class="google-maps">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6046852861427!2d107.60127311411051!3d-6.937759169839846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e899f41b0e7d%3A0xc6af38b146fd23ac!2sMuseum+Sri+Baduga!5e0!3m2!1sid!2sid!4v1510386369155" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>            
+          </div>          
         </div>
       </div>
-    </nav>    
-    <!-- Page Content -->
-    <div class="container">      
-      <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-9" style="margin-top: 24px;">
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <!-- <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> -->
-            <h6 class="card-header">Post Title</h6>
-            <div class="card-body">
-              <p class="card-text text-justify">Selamat datang di website resmi Balai Pengelolaan Museum Negeri Sri Baduga. Web Site ini memberikan informasi kepada Masyarakat untuk mengenal lebih dekat Museum Sri Baduga. Informasi yang diberikan beragam, dari mulai koleksi benda sejarah, kebudayaan, dan Objek Pariwisata Indonesia khusunya Jawa Barat. Masyarakat dapat mengenal lebih dekat sebelum berkunjung ke museum dengan berbagai konten web yang disajikan diantaranya informasi kunjungan dan cara memesan tiket online.</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
+    </section>
 
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="assets/img/posting/59f94fda23d45135276688.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h6 class="card-title">Naskah Kuno Keagamaan Jabar akan Dipublikasikan</h6>
-              <p class="card-text text-justify">Balai Penelitian dan Pengembangan (Litbang) Agama Jakarta bekerjasama dengan Museum Sri Baduga dan Masyarakat Pernaskahan Nusantara (Manassa) mengkaji naskah keagamaan kuno yang pernah ada di Jawa Barat. Kerjasama ini dilakukan dalam rangka penyusunan monograf katalog naskah keagamaan yang tengah direncanakan Balai Litbang Agama Jakarta. Kepala Balai Litbang Agama Jakarta Adlin Sila mengatakan, kajian naskah keagamaan ini akan ditindaklanjuti dalam bentuk katalog yang akan dipublikasikan ke masyarakat. Sehingga deskripsi tentang naskah kuno serta nilai-nilai yang terkandung dapat disebarluaskan kepada masyarakat.</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on Oct 06, 2017
-            </div>
-          </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; 2017 Museum Sribaduga</p>
+        <p class="m-0 text-center text-white">Design by <a href="https://www.facebook.com/fawziridwan">Fawzi Ridwan</a></p><br/>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <a id="up" href="#top" class="back-top text-center hidden-print" onclick="$('body,html').animate({scrollTop:0},1500); return false">
+        <i class="fa fa-angle-double-up fa-lg"></i>
+    </a>
+    <!-- jQuery Lightbox -->
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>    
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
 
-            <!-- Blog Post -->
-            <div class="card mb-4">
-              <img class="card-img-top" src="assets/img/posting/59f94e950633f169314835.jpg" alt="Card image cap">
-              
-              <div class="card-body">
-                <h6 class="card-title">Museum Sri Baduga Miliki 170 Naskah Kuno Keagamaan Jabar</h6>
-                <p class="card-text text-justify">Balai Penelitian dan Pengembangan (Litbang) Agama Jakarta bekerjasama dengan Museum Sri Baduga dan Masyarakat Pernaskahan Nusantara (Manassa) mengkaji naskah keagamaan kuno yang pernah ada di Jawa Barat. Kerjasama ini dilakukan dalam rangka penyusunan monograf katalog naskah keagamaan yang tengah direncanakan Balai Litbang Agama Jakarta. Kepala Balai Litbang Agama Jakarta Adlin Sila mengatakan, kajian naskah keagamaan ini akan ditindaklanjuti dalam bentuk katalog yang akan dipublikasikan ke masyarakat. Sehingga deskripsi tentang naskah kuno serta nilai-nilai yang terkandung dapat disebarluaskan kepada masyarakat.</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
-              </div>
-              <div class="card-footer text-muted">
-                Posted on Oct 05, 2017
-              </div>
-            </div>
-
-            <!-- Pagination -->
-            <ul class="pagination justify-content-center mb-4">
-              <li class="page-item">
-                <a class="page-link" href="#">&larr; Older</a>
-              </li>
-              <li class="page-item disabled">
-                <a class="page-link" href="#">Newer &rarr;</a>
-              </li>
-            </ul>
-
-            </div>
-
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-3">
-            <!-- Side Widget -->
-            <div class="card my-4">
-              <h6 class="card-header" style="background-color: black;background-position : -10% 50%;color: #fff;">Statistik Web</h6>
-              <div class="card-body" style="text-align: center;">
-                <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=localhost/revisi/&digit=style/plain/5/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://www.fabbly.com" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
-              </div>
-            </div>
-            <!-- Search Widget -->
-            <div class="card my-4 panel">
-              <h6 class="card-header" style="background-color: black;background-position : -10% 50%;color: #fff;">Search</h6>
-              <div class="card-body">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary btn-flat" type="button"><i class="fa fa-search"></i></button>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <!-- Padus Widget -->
-            <div class="card my-4 panel">
-              <h6 class="card-header" >Paduan Suara</h6>
-              <div class="card-body">
-                <div class="input-group">
-              <p>Museum di Hatiku</p>
-                  </span>
-                </div>
-              </div>
-            </div>            
-
-            <!-- Categories Widget -->
-            <div class="card my-4">
-              <h6 class="card-header" style="background-color: black;background-position : -10% 50%;color: #fff;">Link Terkait</h6>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-lg-12" style="text-align: left;">
-                    <ul class="list-unstyled mb-0" style="font-size: 15px;">
-                      <li>
-                        <a href="http://www.jabarprov.go.id">Pemerintah Provinsi Jawa Barat</a>
-                      </li>
-                      <li>
-                        <a href="www.disparbud.jabarprov.go.id">Dinas Pariwisata & Kebudayaan Provinsi Jawa Barat</a>
-                      </li>
-                      <li>
-                        <a href="http://www.kemenpar.go.id">Kementerian Pariwisata</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Side Widget -->
-            <div class="card my-4">
-              <h6 class="card-header" style="background-color: black;background-position : -10% 50%;color: #fff;">Alamat IP Anda</h6>
-              <div class="card-body" style="padding: 10px;">
-                <center>
-                  <b>
-                    <span id="ip" style="font-style: bold; font-size: 20px;"></span>                  
-                  </b>
-                </center>
-              </div>
-            </div>
-
-            </div>
-
-            </div>
-            <!-- /.row -->
-
-            </div>
-            <!-- /.container -->
-
-            <!-- Footer -->
-            <footer class="py-5 bg-default">
-              <div class="container">
-                <p class="m-0 text-center text-white">
-                  <a class="fa fa-facebook fa-lg" href="https://www.facebook.com/Museum-Sri-Baduga-Bandung-144968805629442/"></a>
-                  <a class="fa fa-twitter fa-lg" href="https://twitter.com/sribadugamuseum"></a>
-                  <a class="fa fa-instagram fa-lg" href=""></a>
-                </p>
-                <p class="m-0 text-right text-white">&copy; 2017. Museum Sri Baduga. design by <a href="http://www.linkedin.com/fawziridwan">Fawzi Ridwan</a></p>
-              </div>
-            <!-- /.container -->
-            </footer>
-    
-        <a id="up" href="#top" class="back-top text-center hidden-print" onclick="$('body,html').animate({scrollTop:0},500); return false">
-            <i class="fa fa-angle-double-up fa-lg"></i>
-        </a>   
-    </right> 
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
     <script type="text/javascript" src="assets/js/jquery.nivo.slider.js"></script> 
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $('#slider').nivoSlider();
-      });
-    </script>
-    <script type="text/javascript">
-      $.getJSON("http://jsonip.com?callback=?", function (response) {
-          $("#ip").text(response.ip);
-      });
-    </script>    
+    <script src="assets/js/init.js"></script>    
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
     <script type="text/javascript" src="assets/js/popper.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/style.js"></script>

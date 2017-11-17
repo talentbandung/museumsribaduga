@@ -1,15 +1,4 @@
-body  {
-  background: url(assets/img/efek.png) #7B1113 no-repeat;
-  overflow: hidden; 
-}
-
-.image-logo	{
-	width: 50px;
-	height: 50px;
-	margin-top: -15px;
-}
-
-/*.gambar {
+.gambar {
     background-image: url(assets/img/cover-museum-pos-1280x855.jpg);
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -21,18 +10,20 @@ body  {
     margin-top: -60px;
     padding-top: 160px;
     text-align: center;
-}*/
+}
+
+
 
 .overlay{
   background: rgba(63, 29, 94, 0.5);
   color: #fff;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .overlaynav{
   background: rgb(63, 29, 94);
   color: #fff;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .w-100 {
@@ -130,7 +121,7 @@ nav.shrink>li>a {
   position: relative;
   padding-bottom: 75%; // This is the aspect ratio
   height: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .google-maps iframe {
   position: absolute;
